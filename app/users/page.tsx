@@ -1,3 +1,4 @@
+import Link from "next/link";
 import UsersTable from "./UsersTable";
 
 
@@ -12,6 +13,7 @@ const UsersPage = async ({ searchParams }: Props) => {
         <>
             <h1>Users</h1>
             <button className="btn btn-primary w-fit">Button</button>
+            <Link href="/users/new" className="btn btn-secondary">New User</Link>
             <UsersTable sortOrder={resolvedSearchParams.sortOrder} />
         </>
     );
